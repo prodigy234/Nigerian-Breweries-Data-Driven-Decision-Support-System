@@ -107,7 +107,7 @@ st.write("- ", highlight3)
 st.markdown("---")
 
 # === Tabs for Deep Dive ===
-tabs = st.tabs(["Sales", "Logistics", "Distributor Risk", "Social & Media", "Macro Simulator", "Heatmaps & Cross Tabs", "Data Dictionary"])
+tabs = st.tabs(["Sales", "Logistics", "Distributor Risk", "Social & Media", "Macro Simulator", "Heatmaps & Cross Tabs", "Insights & Report"])
 
 with tabs[0]:
     st.subheader("Sales Trend")
@@ -185,8 +185,19 @@ with tabs[5]:
             st.plotly_chart(fig8, use_container_width=True)
 
 with tabs[6]:
-    st.subheader("Data Dictionary")
-    st.write("This app uses multiple sheets from nb_analytics_small.xlsx including sales, logistics, distributor KPIs, pricing, social, macro, etc.")
+    st.subheader("Data-driven Insights")
+    st.write("This report gives a well detailed analytical insights for Nigerian Breweries regarding sales, logistics, distributor KPIs, pricing, social, macro, etc.")
+
+    # Word Report Download
+    st.markdown("### \U0001F4DD Download Full Nigerian Breweries Insights Report")
+    with open("Nigerian_Breweries_Insights_Report.docx", "rb") as doc_file:
+        st.download_button(
+            label="\U0001F4E5 Download Full Word Report",
+            data=doc_file,
+            file_name="Nigerian Breweries Insights Report.docx",
+            mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+
 
 # Footer
 st.markdown("---")
