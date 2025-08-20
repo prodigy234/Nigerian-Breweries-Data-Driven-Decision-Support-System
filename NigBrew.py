@@ -44,6 +44,8 @@ if st.sidebar.button("Reset Filters"):
     state_filter = []
     sku_filter = []
 
+# Page Configuration
+st.set_page_config(page_title="Nigerian Breweries Analytics Dashboard", layout="wide", page_icon="🍺")
 # === Executive Summary ===
 st.title("📊 Nigerian Breweries Executive Dashboard")
 
@@ -184,3 +186,24 @@ with tabs[5]:
 with tabs[6]:
     st.subheader("Data Dictionary")
     st.write("This app uses multiple sheets from nb_analytics_small.xlsx including sales, logistics, distributor KPIs, pricing, social, macro, etc.")
+
+# Footer
+st.markdown("---")
+st.markdown("# About the Developer")
+
+st.image("My image.jpg", width=250)
+st.markdown("## **Kajola Gbenga**")
+
+st.markdown(
+    """
+\U0001F4C7 Certified Data Analyst | Certified Data Scientist | Certified SQL Programmer | Mobile App Developer | AI/ML Engineer
+
+\U0001F517 [LinkedIn](https://www.linkedin.com/in/kajolagbenga)  
+\U0001F4DC [View My Certifications & Licences](https://www.datacamp.com/portfolio/kgbenga234)  
+\U0001F4BB [GitHub](https://github.com/prodigy234)  
+\U0001F310 [Portfolio](https://kajolagbenga.netlify.app/)  
+\U0001F4E7 k.gbenga234@gmail.com
+"""
+)
+
+st.markdown("✅ Created using Python and Streamlit")
