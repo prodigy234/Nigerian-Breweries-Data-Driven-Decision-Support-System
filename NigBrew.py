@@ -44,10 +44,11 @@ if st.sidebar.button("Reset Filters"):
     state_filter = []
     sku_filter = []
 
-# Page Configuration
+# === Page Configuration ===
 st.set_page_config(page_title="Nigerian Breweries Analytics Dashboard", layout="wide", page_icon="🍺")
+
 # === Executive Summary ===
-st.title("📊 Nigerian Breweries Executive Dashboard")
+st.title("📊 Nigerian Breweries Executive & Strategy Dashboard")
 
 sales_df = safe_revenue(dfs["nb_fact_sales"])
 filtered_sales = apply_filters(sales_df)
