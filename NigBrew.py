@@ -217,5 +217,3 @@ st.markdown(
 \U0001F4E7 k.gbenga234@gmail.com
 """
 )
-
-st.markdown("✅ Created using Python and Streamlit")
